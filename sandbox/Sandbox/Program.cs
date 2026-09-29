@@ -2,8 +2,27 @@ using System;
 
 class Program
 {
+    static double AddNumbers(double x, int y)
+    {
+        return x + y;
+    }
+
+    static string MyName()
+    {
+        return "Bob";
+    }
+
+    static void DisplayGreeting(string name)
+    {
+        Console.WriteLine($"Welcome {name}, it's nice to meet you.");
+    }
+
     static void Main(string[] args)
     {
+        string myName = MyName();
+        DisplayGreeting(myName);
+        double total = AddNumbers(12.234, 20);
+        Console.WriteLine(total);
         // int x = 20;
         // int y = 30;
         // int z = 40;
@@ -49,19 +68,19 @@ class Program
         //     Console.WriteLine(friend);
         // }
 
-        string heightString;
-        Console.Write("Enter your height in inches: ");
-        heightString = Console.ReadLine();
+        // string heightString;
+        // Console.Write("Enter your height in inches: ");
+        // heightString = Console.ReadLine();
 
-        int heightInt = int.Parse(heightString);
+        // int heightInt = int.Parse(heightString);
 
-        if (heightInt < 48)
-        {
-            Console.WriteLine("You are too short!");
-        }
-        else if (heightInt > 78)
-        {
-            Console.WriteLine("You are too tall!");
-        }
+        // if (heightInt < 48)
+        // {
+        //     Console.WriteLine("You are too short!");
+        // }
+        // else if (heightInt > 78)
+        // {
+        //     Console.WriteLine("You are too tall!");
+        // }
     }
 }
