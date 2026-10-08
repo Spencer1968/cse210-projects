@@ -1,19 +1,19 @@
-using System;
+// using System;
 
-class Program
-{
+// class Program
+// {
 
-    static void Main(string[] args)
-    {
-        Circle myCircle = new Circle();
+//     static void Main(string[] args)
+//     {
+//         Circle myCircle = new Circle();
 
-        myCircle._radius = 10;
+//         myCircle._radius = 10;
 
-        double area = myCircle.GetArea();
+//         double area = myCircle.GetArea();
 
-        Console.WriteLine(area);
-    }
-}
+//         Console.WriteLine(area);
+//     }
+// }
 
         
         
