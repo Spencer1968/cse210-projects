@@ -22,12 +22,14 @@ class Program
                     myJournal.DisplayJournal();
                     break;
                 case 3:
-                    Console.WriteLine("Save");
-                    // Call ReadFromFile()
+                    Console.WriteLine("What file would you like to save your entries to? ");
+                    string writeFileName = Console.ReadLine();
+                    myJournal.WriteToFile(writeFileName);
                     break;
                 case 4:
-                    Console.WriteLine("Write");
-                    // Call WriteToFile
+                    Console.WriteLine("Which file would you like to read your entries from? ");
+                    string fileName = Console.ReadLine();
+                    myJournal.ReadFromFile(fileName);
                     break;
             }
         }
