@@ -10,7 +10,7 @@ class Program
 
         int response = 0;
 
-        while(response != 5)
+        while(response != 6)
         {
             response = myMenu.ProcessMenu();
             switch (response)
@@ -30,6 +30,11 @@ class Program
                     Console.WriteLine("Which file would you like to read your entries from? ");
                     string fileName = Console.ReadLine();
                     myJournal.ReadFromFile(fileName);
+                    break;
+                case 5:
+                    Console.WriteLine("What is the date of the entry you would like to delete? ");
+                    string deleteDate = Console.ReadLine();
+                    myJournal.DeleteEntry(deleteDate);
                     break;
             }
         }

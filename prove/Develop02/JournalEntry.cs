@@ -26,7 +26,7 @@ class JournalEntry
             "What is one thing that you are grateful for today?",
             "Who is your inspiration recently?",
         };
-        _date = DateTime.Now.ToString();
+        _date = DateTime.Now.ToShortDateString();
         int randomIndex = Random.Shared.Next(prompts.Length);
         _prompt = prompts[randomIndex];
         Console.WriteLine($"{_prompt} ");
