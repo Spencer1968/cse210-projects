@@ -1,7 +1,7 @@
-class ReflectionActivity : BaseActivity
-{
-    private string _prompt;
-    public ReflectionActivity() : base()
-    {
-    }
-}
+// class ReflectionActivity : BaseActivity
+// {
+//     private string _prompt;
+//     public ReflectionActivity() : base()
+//     {
+//     }
+// }

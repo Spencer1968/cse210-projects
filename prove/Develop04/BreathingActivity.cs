@@ -1,11 +1,12 @@
 class BreathingActivity : BaseActivity
 {
-    public BreathingActivity(string name, string description) : base()
+    public BreathingActivity(string name, string description) : base(description, name)
     {
     }
     public void RunActivity()
     {
         // call StartActivity() method
+        StartActivity();
 
         RunCountDownMessage("Get Ready", 5);
         StartTimer();
@@ -16,5 +17,6 @@ class BreathingActivity : BaseActivity
         }
 
         // Call EndActivity()
+        EndActivity();
     }
 }

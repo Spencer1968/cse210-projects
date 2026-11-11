@@ -8,6 +8,7 @@ class Program
 
         while (userSelection != 4)
         {
+            Console.Clear();
             Console.WriteLine("1. Start breathing activity");
             Console.WriteLine("2. Start reflecting activity");
             Console.WriteLine("3. Start listing activity");
@@ -23,10 +24,10 @@ class Program
                     breathingActivity.RunActivity();
                     break;
                 case 2:
-                    ReflectionActivity reflectionActivity = new ReflectionActivity();
+                    // ReflectionActivity reflectionActivity = new ReflectionActivity();
                     break;
                 case 3:
-                    ListingActivity listingActivity = new ListingActivity();
+                    // ListingActivity listingActivity = new ListingActivity();
                     break;
             }
         }        

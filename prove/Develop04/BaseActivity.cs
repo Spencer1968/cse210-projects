@@ -3,14 +3,29 @@ class BaseActivity
     private int _duration;
     private DateTime _endTime;
     private string _startingMessage;
-    public BaseActivity()
+
+    private string _name;
+    public BaseActivity(string startingMessage, string name)
     {
-        _duration = 30;
+        _startingMessage = startingMessage;
+        _name = name;
+        _duration = 0;
     }
 
     public void StartActivity()
     {
-        
+        Console.Clear();
+        Console.WriteLine($"Welcome to {_name.ToUpper()} Activity.");
+        Console.WriteLine($"{_startingMessage}");
+        Console.Write("How long, in seconds, would you like this activity to last? ");
+        _duration = int.Parse(Console.ReadLine());
+    }
+
+    public void EndActivity()
+    {
+        RunSpinnerMessage("Well done...", 5);
+        Console.WriteLine();
+        RunSpinnerMessage($"You just completed {_name} activity for {_duration} seconds.", 5);
     }
 
     public void StartTimer()
@@ -41,12 +56,19 @@ class BaseActivity
         // DateTime now = DateTime.Now;
         DateTime endTime = DateTime.Now.AddSeconds(seconds);
         // for (int i = 0; i < seconds; i++)
+        Console.Write(message);
         while (DateTime.Now < endTime)
         {
-            Console.Write("+");
+            Console.Write("-");
             Thread.Sleep(200);
             Console.Write("\b");
-            Console.Write("-");
+            Console.Write("\\");
+            Thread.Sleep(200);
+            Console.Write("\b");
+            Console.Write("|");
+            Thread.Sleep(200);
+            Console.Write("\b");
+            Console.Write("/");
             Thread.Sleep(200);
             Console.Write("\b");
         }
