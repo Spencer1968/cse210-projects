@@ -1,8 +1,26 @@
 class BaseActivity
 {
+    private int _duration;
+    private DateTime _endTime;
+    private string _startingMessage;
     public BaseActivity()
     {
-        // COMPLETE
+        _duration = 30;
+    }
+
+    public void StartActivity()
+    {
+        
+    }
+
+    public void StartTimer()
+    {
+        _endTime = DateTime.Now.AddSeconds(_duration);
+    }
+
+    public bool HasTimerExpired()
+    {
+        return DateTime.Now > _endTime;
     }
 
     public void RunCountDownMessage(string message, int seconds)
