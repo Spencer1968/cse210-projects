@@ -24,7 +24,8 @@ class Program
                     breathingActivity.RunActivity();
                     break;
                 case 2:
-                    // ReflectionActivity reflectionActivity = new ReflectionActivity();
+                    ReflectionActivity reflectionActivity = new ReflectionActivity("Reflection", "Consider each of the following prompts to reflect.");
+                    reflectionActivity.RunActivity();
                     break;
                 case 3:
                     ListingActivity listingActivity = new ListingActivity("Listing", "List your responses below.");
