@@ -1,18 +1,17 @@
 class ReflectionActivity : BaseActivity
 {
-    private string _prompt;
     public ReflectionActivity(string name, string description) : base(description, name)
     {
     }
 
-    string[] prompts = {
+    private string[] _prompts = {
         "Think of a time when you stood up for someone else.",
         "Think of a time when you did something really difficult.",
         "Think of a time when you helped someone in need.",
         "Think of a time when you did something truly selfless."
     };
 
-    string[] questions =
+    private string[] _questions =
     {
         "Why was this experience meaningful to you?",
         "Have you ever done anything like this before?",
@@ -32,11 +31,13 @@ class ReflectionActivity : BaseActivity
 
         RunCountDownMessage("Get Ready", 5);
         StartTimer();
-        Console.WriteLine(prompts[Random.Shared.Next(prompts.Length)]);
+        Console.Write(_prompts[Random.Shared.Next(_prompts.Length)]);
+        RunSpinnerMessage("", 6);
+        Console.WriteLine();
 
         while (! HasTimerExpired()) // Add when code is ready
         {
-            Console.Write(questions[Random.Shared.Next(questions.Length)]);
+            Console.Write(_questions[Random.Shared.Next(_questions.Length)]);
             RunSpinnerMessage("", 8);
             Console.WriteLine();
         }
